@@ -6,6 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Clock</title>
+    <style>
+        html {
+            background: blue;
+            background-size: cover;
+            /* opacity: .5; */
+            text-align: center;
+            font-size: 10px;
+        }
+
+        body{
+            font-size: 2rem;
+            display: flex;
+            flex: 1;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .clock{
+            width: 50rem;
+            height: 50rem;
+            border: 20px solid white;
+            border-radius: 50%;
+            margin: 50px auto;
+            position: relative;
+        }
+        .hand{
+            width: 50%;
+            height: 6px;
+            background: black;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-left: 1px;
+            margin-right: 1px;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all 0.5s;
+            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+        }
+    </style>
 </head>
 
 <body>
@@ -16,6 +56,9 @@
             <div class="hand second-hand"></div>
         </div>
     </div>
+    <script>
+        
+    </script>
 </body>
 
 </html>
