@@ -30,6 +30,7 @@
             border-radius: 50%;
             margin: 50px auto;
             position: relative;
+            transform: translateY(-3px);
         }
         .hand{
             width: 50%;
@@ -57,7 +58,29 @@
         </div>
     </div>
     <script>
-        
+        const secondHand = document.querySelector('.second-hand');
+        const minuteHand = document.querySelector('.min-hand');
+        const hourHand = document.querySelector('.hour-hand');
+
+        function setDate() {
+            const date = new Date();
+            const sec = date.getSeconds();
+            const secDegrees = ((sec / 60) * 360) + 90;
+            secondHand.style.transform = `rotate(${secDegrees}deg)`;
+            console.log(sec);
+
+            const mins = date.getMinutes();
+            const minDegrees = ((mins / 60) * 360) + 90;
+            minuteHand.style.transform = `rotate(${minDegrees}deg)`;
+            console.log(mins);
+
+            const hour = date.getHours();
+            const hourDegrees = ((hour / 60) * 360) + 90;
+            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+            console.log(hour);
+        }
+        // creates a timer function a specified intervals
+        setInterval(setDate, 1000);
     </script>
 </body>
 
